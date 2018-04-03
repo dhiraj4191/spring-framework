@@ -57,8 +57,8 @@ class GroovyDynamicElementReader extends GroovyObjectSupport {
 
 
 	@Override
-	public Object invokeMethod(String name, Object args) {
-		if (name.equals("doCall")) {
+	public Object invokeMethod(String name, Object args){
+		if (name.equals("doCall")){
 			def callable = args[0]
 			callable.resolveStrategy = Closure.DELEGATE_FIRST
 			callable.delegate = this
@@ -71,8 +71,7 @@ class GroovyDynamicElementReader extends GroovyObjectSupport {
 			return result
 		}
 
-		else {
-			builder = new StreamingMarkupBuilder();
+		else {builder = new StreamingMarkupBuilder();
 			def myNamespace = this.rootNamespace
 			def myNamespaces = this.xmlNamespaces
 
