@@ -72,7 +72,7 @@ class GroovyDynamicElementReader extends GroovyObjectSupport {
 		}
 
 		else {
-			StreamingMarkupBuilder builder = new StreamingMarkupBuilder();
+			builder = new StreamingMarkupBuilder();
 			def myNamespace = this.rootNamespace
 			def myNamespaces = this.xmlNamespaces
 
