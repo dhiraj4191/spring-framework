@@ -15,8 +15,5 @@ node {
          
         def findbugs = scanForIssues tool: [$class: 'FindBugs'], pattern: '**/target/findbugsXml.xml'
         publishIssues issues:[findbugs]
- 
-        def spotbugs = scanForIssues tool: [$class: 'SpotBugs'], pattern: '**/target/spotbugsXml.xml'
-        publishIssues issues:[spotbugs]
     }
 }
