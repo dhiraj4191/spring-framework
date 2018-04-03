@@ -1,4 +1,9 @@
 node {
+    
+    stage('Clone sources') {
+        git url: 'https://github.com/dhiraj4191/spring-framework.git'
+    }
+
     stage ('Analysis') {
         def mvnHome = tool 'maven'
  
